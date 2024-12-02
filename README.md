@@ -13,6 +13,9 @@ A simple tool for visualizing DNA sequences in both 2D and 3D, with support for 
 - Configurable visualization parameters
 - Multi-threaded processing for large datasets
 
+## Example interactive view
+<img src="img.png" width="400"/>
+
 ## Installation
 
 Create and activate a virtual environment:
