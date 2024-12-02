@@ -83,9 +83,9 @@ The DNA input file should be tab-separated with these columns:
 ## Output Files
 The program generates:
 
-dna_helix_[timestamp].png: 2D visualization
-dna_helix_3d_[timestamp].png: 3D static visualization
-Interactive 3D model in Jupyter notebook
+* dna_helix_[timestamp].png: 2D visualization
+* dna_helix_3d_[timestamp].png: 3D static visualization
+* Interactive 3D model in Jupyter notebook
 
 ## Color Coding
 Base pairs are represented with distinct colors:
