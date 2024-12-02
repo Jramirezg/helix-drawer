@@ -1,0 +1,3 @@
+dna_file_path: "test/large_test_ancestry_data.txt"
+base_pairs: 200
+output_path: "output"
