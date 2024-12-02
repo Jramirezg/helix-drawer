@@ -125,3 +125,5 @@ python3 -m tests.generate_test_data
 ```
 
 This will create a test file with 500,000 DNA entries, perfect for testing the visualization features without requiring real genetic data.
+
+
