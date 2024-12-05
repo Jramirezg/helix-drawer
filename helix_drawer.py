@@ -47,8 +47,28 @@ def calculate_helix_coordinates(base_pairs):
 
 def parse_ancestry_dna(file_path):
     logger.info(f"Parsing DNA data from {file_path}")
-    data = np.genfromtxt(file_path, delimiter='\t', dtype=str, comments='#')
-    return data[:, :4]
+    data = []
+    with open(file_path, 'r') as f:
+        for line in f:
+            if line.startswith('#') or not line.strip():
+                continue
+            if line.startswith('rsid'):
+                continue
+
+            parts = line.strip().split()
+            if len(parts) >= 5:
+                rsid = parts[0]
+                chromosome = parts[1]
+                position = parts[2]
+                # Skip entries with "0 0" genotypes or containing 'I'
+                if (parts[3] != "0" and parts[4] != "0" and
+                    'I' not in parts[3] and 'I' not in parts[4]):
+                    genotype = parts[3] + parts[4]
+                    data.append([rsid, chromosome, position, genotype])
+
+    return np.array(data) if data else np.array([[]])
+
+
 
 
 def create_batch_spheres(coordinates, colors):
