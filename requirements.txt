@@ -22,5 +22,5 @@ python-dateutil==2.9.0.post0
 requests==2.33.1
 scipy==1.17.1
 six==1.17.0
-urllib3==2.6.3
+urllib3==2.7.0
 yarl==1.23.0
